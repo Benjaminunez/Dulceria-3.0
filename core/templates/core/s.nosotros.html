@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+<!-- estas caracteristicas son solamente para la pagina de s.nosotros -->
+<link rel="stylesheet" href="{% static 's.nosotros.css' %}">
+<link rel="icon" href="{% static 'Imagenes/logodulceria.ico'%}">
+{% endblock %}
+
+<!-- molde incertado dentro de los html... -->
+{% block fuentes %} 
+{% endblock %}
+
+{% block content %}
+    <section id = "direccion">
+    <div class="ubication">
+        <div id="map"></div>
+        <script>
+            function initMap() {
+                const melipilla = { lat: -33.682560, lng: -71.214400 }; // Coordenadas de Melipilla, Chile
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15,
+                    center: melipilla,
+                });
+                const marker = new google.maps.Marker({
+                    position: { lat: -33.682560, lng: -71.214400 }, // Coordenadas de Serrano 1105 en Melipilla
+                    map: map,
+                    title: "Serrano 1105, Melipilla, Chile",
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-7j6fW1eYrn2JxNTLplPj8WdbRV69jsU&callback=initMap" async defer>
+        </script>    
+        <div id="infolocation">
+            <h2>Ubicacion:  Serrano 1105, Melipilla, Chile</h2>
+            <h2>Abierto: Lunes A Sabado</h2>
+            <h2>Horario: 10:00 a 18:00 Sabado: 10:00 a 15:00</h2>
+        </div>
+      </div>
+    </section>
+    </div>
+{% endblock%}

@@ -1,0 +1,39 @@
+-- models 
+
+    # en caso que el producto este en oferta se elimina el precio tachado.
+    
+    def tachado(self):
+        if self.oferta:
+            return "$"+str(round(self.precio + 1.2))
+        return ""
+
+-- principal
+<section id="catalogo">
+  {% for dulce in dulces %}
+    <div class="dulce">
+        <div class="descripcion">
+          <img src="{{dulce.imagen}}" alt="" class="imagen">
+          <div class="cant-precio">
+            <div class="catidad">
+              <span>quedan</span>
+              <span>{{dulce.stock}}</span>
+            </div>
+              <div class="precio">
+                <span class="tachado">{{dulce.tachado}}</span>
+                <span>{{dulce.precio}}</span>
+              </div>
+          </div>
+              <div class="agregar">
+                agregar al carro
+                <img src="{% static 'Imagenes/buy.ico' %}" alt="">
+              </div>
+        </div>
+    </div>
+  {% endfor %}
+</section>
+
+-- views
+    dulces = Producto.objects.all()
+, {'dulces' :dulces}
+
+    
