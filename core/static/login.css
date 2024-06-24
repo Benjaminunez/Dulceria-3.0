@@ -1,0 +1,49 @@
+.login-container {
+    position: relative;
+    z-index: 1; /* Asegura que el formulario esté delante del video */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el formulario */
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input {
+    width: calc(100% - 20px); /* Ajuste para el padding del input */
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
