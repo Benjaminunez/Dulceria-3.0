@@ -16,3 +16,6 @@ def colaborador(request):
 # creaciom de ruta hacia el archivo html 'contactos'
 def contacto(request):
     return render(request,'core/contactos.html')
+#creacion de ruta pal login
+def login(request):
+    return render(request,'core/login.html')
