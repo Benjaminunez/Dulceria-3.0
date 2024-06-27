@@ -1,7 +1,19 @@
-<h1> INICIO DE SESION </h1>
-<section id="formulario" >
-    <form action="" method="post">
-        {{form}}
-        <button type="submit">INICIO</button>
-    </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load crispy_forms_tags %}
+    <title>Login</title>
+</head>
+<body>
+        <h1> INICIO DE SESION </h1>
+            <section id="formulario" >
+            <form action="" method="post">
+                {{% csrf_token %}}
+                {{form | crispy}}
+                <button type="submit">INGRESAR</button>
+            </form>
 </section>
+</body>
+</html> 

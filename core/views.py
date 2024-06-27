@@ -1,8 +1,15 @@
 from django.shortcuts import render
 from .models import *
-
+from django.contrib.auth.views import logout_then_login
+from .forms import *
 # Create your views here.
 # creaciom de ruta hacia el archivo html 'principal.html'
+
+def addtocar(request, codigo):
+    carro = request.session.get("carro",[])
+    carro.append(codigo)
+    request.session["carro"] = carro
+    return redirect(to="home")
 def home(request):
     #le vamos a pasar los productos que estan ingresados en el db.
     dulces = Producto.objects.all()
