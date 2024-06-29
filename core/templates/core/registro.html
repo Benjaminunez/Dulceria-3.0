@@ -4,16 +4,14 @@
 
 <title>Inicio Sesion</title>
 <!-- carga de contenido css en el html de Login -->
-<link rel="stylesheet" href="{% static 'login.css' %}">
+<link rel="stylesheet" href="{% static 'registro.css' %}">
     <section id="cuerpo">
         <div id="formulario">
-            <h1>Inicio de sesion</h1>
-            <h2>"Dulceria los 3 Socios"</h2>
+            <h1>Nuevo Usuario</h1>
             <form action="" method="post">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <button type="submit" id="ingresar">Ingresar</button>
-                <span>¿aun no registrado?  <a href="{% url 'registro'%}">Ingresar aca</a></span>
+                <button type="submit" id="ingresar">Registrar Usuario</button>
             </form>
         </div>
     </section>

@@ -1,15 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from django.contrib.auth.views import logout_then_login
 from .forms import *
+
 # Create your views here.
 # creaciom de ruta hacia el archivo html 'principal.html'
-
-def addtocar(request, codigo):
-    carro = request.session.get("carro",[])
-    carro.append(codigo)
-    request.session["carro"] = carro
-    return redirect(to="home")
 def home(request):
     #le vamos a pasar los productos que estan ingresados en el db.
     dulces = Producto.objects.all()
@@ -23,6 +18,16 @@ def colaborador(request):
 # creaciom de ruta hacia el archivo html 'contactos'
 def contacto(request):
     return render(request,'core/contactos.html')
-#creacion de ruta pal login
-def login(request):
-    return render(request,'core/login.html')
+# creaciom de funcion para cerra sesion
+def logout(request):
+    return logout_then_login(request, login_url="login")
+# creaciom de funcion para redirigir y crear registro
+def registro(request):
+    if request.method == "POST":
+        registro = Registro(request.POST)
+        if registro.is_valid():
+            registro.save()
+            return redirect(to="login")
+    else:
+        registro = Registro()
+    return render(request,'core/registro.html', {'form' :registro})

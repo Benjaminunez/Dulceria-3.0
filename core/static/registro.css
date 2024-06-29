@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    height: 97.8vh;
+    height: auto;
     background-image: url(https://t4.ftcdn.net/jpg/02/92/30/91/360_F_292309140_YIKAavpf8Cggz7b5jYlmtSPyhx2F0E3O.jpg);
 
 }
@@ -16,7 +16,7 @@
     border: 1px solid black;
     column-gap: 5vh;
     height: auto;
-    width: 60vh;
+    width: 68vh;
     border-radius: 2rem;
     background-color: white;
 }
@@ -41,7 +41,7 @@
 #formulario > form {
     display: flex;
     flex-direction: column;
-    row-gap: 8vh;
+    row-gap: 5vh;
     justify-content: center;
     align-items: center;
     margin-top: 5vh;
@@ -59,6 +59,7 @@
     border-radius: 20px; /* Bordes redondeados */
     cursor: pointer; /* Cambiar cursor al pasar el ratón */
     width: 30vh;
+    margin-top: 2vh;
 }
 
 #div_id_username > div > label{
@@ -88,4 +89,103 @@
 
 #formulario > span {
     margin-bottom: 2vh;
+}
+
+/*------------------------------------*/
+#div_id_username > label {
+    margin-left: 3vh;
+}
+
+#div_id_username > div > input {
+    width: 60vh;
+    border-radius: 3px;
+    border-radius: 20px;
+    font-size: 16px;
+    height: 4vh;
+    margin-left: 3vh;
+}
+
+#div_id_username > div > small {
+    margin-left: 3vh;
+}
+
+/*------------------------------------*/
+
+#div_id_first_name > div > input {
+    width: 60vh;
+    border-radius: 3px;
+    border-radius: 20px;
+    margin-left: 3vh;
+    height: 4vh;
+}
+
+#div_id_first_name > label {
+    margin-left: 3vh;
+}
+
+#div_id_first_name > div > small {
+    margin-left: 3vh;
+}
+
+/*------------------------------------*/
+
+#div_id_last_name > div > input {
+    width: 60vh;
+    border-radius: 3px;
+    border-radius: 20px;
+    margin-left: 3vh;
+    height: 4vh;
+}
+
+#div_id_last_name > label {
+    margin-left: 3vh;
+}
+
+#div_id_last_name > div > small {
+    margin-left: 3vh;
+}
+
+/*------------------------------------*/
+
+#div_id_email > div > input {
+    width: 60vh;
+    border-radius: 3px;
+    border-radius: 20px;
+    margin-left: 3vh;
+    height: 4vh;
+}
+
+#div_id_email > label {
+    margin-left: 3vh;
+}
+
+#div_id_email > div > small {
+    margin-left: 3vh;
+}
+
+/*------------------------------------*/
+
+#div_id_password1 > div > input {
+    width: 60vh;
+    border-radius: 3px;
+    border-radius: 20px;
+    margin-right: 2vh;
+    height: 4vh;
+}
+/*------------------------------------*/
+
+#div_id_password2 > div > input {
+    width: 60vh;
+    border-radius: 3px;
+    border-radius: 20px;
+    margin-left: 2vh;
+    height: 4vh;
+}
+
+#div_id_password2 > label {
+    margin-left: 3vh;
+}
+
+#div_id_password2 > div > small {
+    margin-left: 3vh;
 }

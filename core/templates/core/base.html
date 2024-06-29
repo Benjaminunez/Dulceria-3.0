@@ -33,29 +33,28 @@
     </head>
 <body>
     
-<header id="inicio">
-    <!-- logo y nombre de la pagina en header -->    
-    <a href="{% url 'home' %}" class="header-logo">
-        <img src="{% static 'Imagenes/logoalex.png'%}" alt="logo dulceria">
-        <h 2 class="nombre-empresa">dulceria los 3 socios</h2>
-    </a>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-              productos
-            </button>
-            <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#tarjetas">Galletas<span class="material-symbols-outlined">cookie</span></a></li>
-            <li><a class="dropdown-item" href="#carru_2">Bebidas<span class="material-symbols-outlined">water_full</span></a></li>
-            <li><a class="dropdown-item" href="#carru_3">Pasteles<span class="material-symbols-outlined">cake</span></a></li>
-            </ul>
-        </div>
-        <div class="pestanas">
-            <a href="{% url 'nosotros' %}" class="nav-linl">ubicacion</a>
-            <a href="{% url 'contacto' %}" class="nav-linl">contactos</a>
-            <a href="{% url 'colaborador' %}" class="nav-linl">colaboradores</a>
-            <button class="carrito"> carrito</button>
-        </div>
-</header>
+    <header id="inicio">
+        <!-- logo y nombre de la pagina en header -->    
+        <a href="{% url 'home' %}" class="header-logo">
+            <img src="{% static 'Imagenes/logoalex.png'%}" alt="logo dulceria">
+            <h 2 class="nombre-empresa">dulceria los 3 socios</h2>
+        </a>
+            <div class="pestanas">
+                <a href="{% url 'nosotros' %}" class="nav-linl">ubicacion</a>
+                <a href="{% url 'contacto' %}" class="nav-linl">contactos</a>
+                <a href="{% url 'colaborador' %}" class="nav-linl">colaboradores</a>
+            </div>
+            <div id="usuario">
+                {% if user.is_authenticated %}
+                    {{user.username}}
+                    <a href="{% url 'logout' %}">logout</a>
+                    <button> carrito</button>
+                {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                    <button> carrito</button>
+                {% endif %}
+            </div>
+    </header>
 
 {% block content %}
 {% endblock%}
