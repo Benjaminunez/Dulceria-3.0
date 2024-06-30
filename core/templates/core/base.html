@@ -46,12 +46,12 @@
             </div>
             <div id="usuario">
                 {% if user.is_authenticated %}
-                    {{user.username}}
+                    <img src="{% static 'Imagenes/user.png'%}" alt="">{{user.username}}
                     <a href="{% url 'login' %}">logout</a>
                     <button> carrito</button>
                 {% else %}
                     <a href="{% url 'login' %}">Login</a>
-                    <button> carrito</button>
+                    <button> <img src="{% static 'Imagenes/shoppingcard.png'%}" alt=""></button>
                 {% endif %}
             </div>
     </header>
