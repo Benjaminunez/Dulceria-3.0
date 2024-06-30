@@ -12,6 +12,7 @@
                 {% csrf_token %}
                 {{ form | crispy }}
                 <button type="submit" id="ingresar">Registrar Usuario</button>
+                <a href="{% url 'login'%}"> Volver</a>
             </form>
         </div>
     </section>

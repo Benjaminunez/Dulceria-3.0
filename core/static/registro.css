@@ -172,6 +172,7 @@
     margin-right: 2vh;
     height: 4vh;
 }
+
 /*------------------------------------*/
 
 #div_id_password2 > div > input {
@@ -188,4 +189,13 @@
 
 #div_id_password2 > div > small {
     margin-left: 3vh;
+}
+
+/*------------------------------------*/
+
+.invalid-feedback{
+    color: red;
+    display: flex;
+    margin-left: 3vh;
+    font-size: small;
 }
