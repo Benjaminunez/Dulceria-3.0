@@ -83,11 +83,9 @@
                 <span>${{dulce.precio}}</span>
               </div>
           </div>
-              <div class="agregar">
-                  <a href="{% url 'addtocar' %}">Agregar al Carrito</a>
-                  <img src="{% static 'imagenes/shopping_cart_64px.png' %}" alt="logoCarrito">
-                
-              </div>
+          <div class="agregar">
+            <button>Agregar al Carrito</button>
+            </div>    
         </div>
     </div>
   {% endfor %}
