@@ -47,7 +47,7 @@
             <div id="usuario">
                 {% if user.is_authenticated %}
                     {{user.username}}
-                    <a href="{% url 'logout' %}">logout</a>
+                    <a href="{% url 'login' %}">logout</a>
                     <button> carrito</button>
                 {% else %}
                     <a href="{% url 'login' %}">Login</a>
