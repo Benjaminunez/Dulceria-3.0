@@ -521,3 +521,32 @@ header{
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
+
+.agregar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3px;
+    margin-top: 15px;
+    border-radius: 20px;
+    background-color: #ffd316;
+    /* text-decoration: none; */
+    font-family: "Titan One", sans-serif;
+    font-weight: 300;
+}
+
+.agregar:hover{
+    background-color: #231f20;;
+}
+
+
+
+.agregar > a{
+    text-decoration: none;
+    color: #231f20;
+}
+
+.agregar > a:hover{
+    color: #ffd316;
+}
