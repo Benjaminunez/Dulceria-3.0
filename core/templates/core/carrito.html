@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+<!-- estas caracteristicas son solamente para la pagina de s.nosotros -->
+<link rel="stylesheet" href="{% static 'carrito.css' %}">
+<link rel="icon" href="{% static 'Imagenes/logodulceria.ico'%}">
+{% endblock %}
+
+<!-- molde incertado dentro de los html... -->
+{% block fuentes %} 
+{% endblock %}
+
+{% block content %}
+
+    <h1 id="titulo-carro">Carrito de {{user.username}}</h1>
+    <section id="carrito">
+        <table>
+            <thead>
+                <tr>
+                    <th class="contenedor">Codigo</th>
+                    <th class="contenedor">Detalle</th>
+                    <th class="contenedor">Imagen</th>
+                    <th class="contenedor">Precio</th>
+                    <th class="contenedor">Cantidad</th>
+                    <th class="contenedor">Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in carro %}
+                    <tr>
+                        <td class="contenedor">{{ item.0 }}</td>
+                        <td class="contenedor">{{ item.1 }}</td>
+                        <td class="contenedor"><img src="{{item.2}}" alt="" class="imagen-carrito"></td>
+                        <td class="contenedor">${{ item.3 }}</td>
+                        <td class="contenedor">{{ item.4 }}.uni</td>
+                        <td class="contenedor">${{ item.5 }}</td>
+                        <td>
+                            <a href="{% url 'dropitem' item.0 %}">
+                                <img src="{% static 'Imagenes/close.ico' %}" alt="">
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% if not carro%}
+
+<h2 style="width: 100%; text-align: center;">{{user.username}} no tiene nada en su carrito</h2>
+{% else %}
+<div class="comprar">
+    <a href="{% url 'comprar' %}">COMPRAR</a>
+</div>
+{% endif %}
+
+{% endblock%}

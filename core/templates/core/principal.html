@@ -78,17 +78,16 @@
               <span>{{dulce.stock}} <span>unid</span></span>
             </div>
               <div class="precio">
-                <span>total :</span>
+                <span>precio :</span>
                 <span class="tachado">{{dulce.tachado}}</span>
                 <span>${{dulce.precio}}</span>
               </div>
           </div>
-          <div class="agregar">
-            <button>Agregar al Carrito</button>
-            </div>    
+              <div class="agregar">
+                  <a href="{% url 'addtocar' dulce.codigo %}">Agregar al Carrito</a>
+              </div>
         </div>
     </div>
   {% endfor %}
 </section>
-
 {% endblock%}

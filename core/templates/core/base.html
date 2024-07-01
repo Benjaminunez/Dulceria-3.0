@@ -33,28 +33,28 @@
     </head>
 <body>
     
-    <header id="inicio">
-        <!-- logo y nombre de la pagina en header -->    
-        <a href="{% url 'home' %}" class="header-logo">
-            <img src="{% static 'Imagenes/logoalex.png'%}" alt="logo dulceria">
-            <h2 class="nombre-empresa">dulceria los 3 socios</h2>
-        </a>
-            <div class="pestanas">
-                <a href="{% url 'nosotros' %}" class="nav-linl">ubicacion</a>
-                <a href="{% url 'contacto' %}" class="nav-linl">contactos</a>
-                <a href="{% url 'colaborador' %}" class="nav-linl">colaboradores</a>
-            </div>
-            <div id="usuario">
-                {% if user.is_authenticated %}
-                    {{user.username}}
-                    <a href="{% url 'login' %}">logout</a>
-                    <button> carrito</button>
-                {% else %}
-                    <a href="{% url 'login' %}">Login</a>
-                    <button> carrito</button>
-                {% endif %}
-            </div>
-    </header>
+<header id="inicio">
+    <!-- logo y nombre de la pagina en header -->    
+    <a href="{% url 'home' %}" class="header-logo">
+        <img src="{% static 'Imagenes/logoalex.png'%}" alt="logo dulceria">
+        <h2 class="nombre-empresa">dulceria los 3 socios</h2>
+    </a>
+        <div class="pestanas">
+            <a href="{% url 'nosotros' %}" class="nav-linl">ubicacion</a>
+            <a href="{% url 'contacto' %}" class="nav-linl">contactos</a>
+            <a href="{% url 'colaborador' %}" class="nav-linl">colaboradores</a>
+        </div>
+        <div id="usuario">
+            {% if user.is_authenticated %}
+                <img src="{% static 'Imagenes/user.png'%}" alt="" id="userimage">{{user.username}}
+                <a href="{% url 'login' %}" id="button-logout">Logout</a>
+                <a class="button-buy" href="{% url 'carrito' %}"> <img src="{% static 'Imagenes/shoppingcard.png'%}" alt="" class="shoppingcardimg"></a>
+            {% else %}
+                <a href="{% url 'login' %}" id="button-logout">Login</a>
+                <a class="button-buy" href="{% url 'carrito' %}"> <img src="{% static 'Imagenes/shoppingcard.png'%}" alt="" class="shoppingcardimg"></a>
+            {% endif %}
+        </div>
+</header>
 
 {% block content %}
 {% endblock%}

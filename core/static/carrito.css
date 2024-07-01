@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/**{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }*/
+
+  @keyframes bajar{
+    0%{
+        transform: translateY(100px)
+    }
+    100%{
+        transform: translateY(0px)
+    }
+}
+
+*{
+    animation: bajar 1s;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+    display: flex;
+    height: 20vh;
+    background-color: #fffbf7;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    margin-right: 5vh;
+    text-decoration: none;
+    border-radius: 100%;
+}
+
+.header-logo img{
+    height: 120px;
+}
+
+.header-logo h2{
+    color: black;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal
+}
+
+.nav-linl{
+    text-decoration: none;
+    justify-content: space-evenly;
+    column-gap: 5px;
+    margin-right: 10vh;
+    color: black;
+    font-family: "Ubuntu", sans-serif ;
+    font-weight: 700 ;
+    font-style: normal;
+}
+
+
+.btn{
+    background-color: #fffbf7 !important;
+    color: black !important;
+    font-family: "Ubuntu", sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    border: none !important;
+}
+
+.dropdown-item{
+    font-family: "Ubuntu", sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+}
+
+@media screen and (max-width:1200px){
+    header{
+        padding: 40px;
+    }
+
+}
+
+.dropdown-item span{
+    display: flex;
+    justify-content: end;
+}
+/* parte foter de la pagina*/
+
+#final-principal{
+    height: 75vh;
+    background-color: #fffbf7;
+
+}
+
+.center-final{
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
+    column-gap: -25%;
+
+}
+
+.center-final > #contactos{
+    display: flex;
+    align-items: center ;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.contact{
+    text-decoration: none;
+    color: black;
+}
+
+.center-final > img{
+    height: 50vh;
+    width: 60vh;
+    margin-left: -10%;
+
+}
+
+#final-line{
+    height: 8vh;
+    background-color: #231f20;
+    display: flex;
+    align-items: end;
+}
+#final-line > p{
+    color: beige;
+    display: flex;
+    justify-content: baseline;
+    margin-left: 20vh;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.helado{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#boton-final{
+    background-color: #b68249;
+    color: #ffffff;
+    -webkit-text-stroke: 1px black;
+    border-radius: 20px;
+}
+
+.flex-botton{
+    display: flex;
+    justify-content: center;
+    margin-right: -5vh;
+    margin-top: 15px;
+}
+
+#usuario > .button-buy{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffd316; /* Cambia el color de fondo según tu diseño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave para resaltar */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#usuario {
+    display: flex;
+    column-gap: 3vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.shoppingcardimg{
+    width: 4vh;
+    
+}
+
+#usuario > img{
+    width: 4vh;
+}
+
+#usuario > #button-logout {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #e74c3c; /* Color rojo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*---- desarrollo de modificacion en tabla carrito */
+
+#carrito{
+    width: auto;
+}
+
+#titulo-carro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: chocolate;
+    font-family: "Titan One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 5px;
+}
+
+#carrito > table{
+    display: flexbox;
+    margin-left: 30vh;
+}
+
+#carrito > table > thead{
+    background-color: chocolate;
+    color: white;
+}
+
+.imagen-carrito{
+    width: 15vh;
+}
+
+.contenedor{
+    width: 25vh;
+    font-family: "Titan One", sans-serif;
+    font-weight: 50;
+    text-align: center;
+}
+
+.comprar{
+    width: 96%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.comprar > a{
+    line-height: 40px;
+    background-color: chartreuse;
+    color: #ffffff;
+    width: 200px;
+    text-decoration: none;
+    text-align: center;
+}
+.comprar > a:hover{
+    background-color: #ffd316;
+}

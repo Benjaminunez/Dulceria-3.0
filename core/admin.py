@@ -4,3 +4,5 @@ from .models import *
 # Register your models here.
 # registro de modelo creado para productos
 admin.site.register(Producto)
+admin.site.register(Venta)
+admin.site.register(DetalleVenta)
